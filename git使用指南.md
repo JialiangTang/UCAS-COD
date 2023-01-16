@@ -26,7 +26,7 @@
 
 **远程上游仓库（upstream）：**现在，假设W老师要求我们写一个五子棋程序，他在云端放上了原始代码框架，那么我们需要做的是把框架弄到本地来。首先我们需要将这个仓库设置为我们的远程上游仓库（git remote add upstream），然后在每次实验前拉取框架代码更新（git pull upstream master）。其中**pull命令**是专门负责拉取远程仓库内容的命令，它会把框架拉取到本地仓库里。
 
-**远程仓库（remote）：**既然要统一管理代码，那就需要一个云端的仓库存放代码，这个仓库就是**远程仓库**，远程仓库是我和G都可以在网上访问的，可以直接在网上点击浏览或者下载远程仓库里的文件。有很多网站提供远程仓库服务，如github，gitee等，计组实验中，我们用的是SERVE云平台。**注意：事实上，pull命令对远程仓库也奏效。**例如，我在github中的某个远程仓库界面如下：
+**远程仓库（remote）：**既然要统一管理代码，那就需要一个云端的仓库存放代码，这个仓库就是**远程仓库**，远程仓库是我和G都可以在网上访问的，可以直接在网上点击浏览或者下载远程仓库里的文件。有很多网站提供远程仓库服务，如github，gitee等，计组实验中，我们用的是SERVE云平台。**注意：事实上，pull命令对远程仓库奏效。你可以把远程上游仓库看成特殊的远程仓库。**例如，我在github中的某个远程仓库界面如下：
 
 ![](http://m.qpic.cn/psc?/V50nj7bY2Lzqzo3uZg6y2nU9kP1lmhTH/ruAMsa53pVQWN7FLK88i5h2FwFBT4IdaoHROxoht4eUweYq*gzv6xeBL49UsUhbf09Uj*9F.1GCiukwGcG*02IqAHqg1WyT8APese8fhMMM!/b&bo=gAeuAwAAAAADBwg!&rf=viewer_4)
 
@@ -138,9 +138,9 @@ git show <tag-name> //显示该标签及其对应的commit信息
 
 ![仓库结构示意](http://m.qpic.cn/psc?/V50nj7bY2Lzqzo3uZg6y2nU9kP1lmhTH/ruAMsa53pVQWN7FLK88i5lzpDUs02UxjrQvIx6mMryJFsXcui9viVViZXthvjxMAY79RTcqkBVDhpQIMRxvlRbZHxDqVEhhJ8xywzDklo6c!/b&bo=NARxAgAAAAADB2E!&rf=viewer_4)
 
-如图，对应前文讲述的各仓库和命令来理解。
+如图，对应前文讲述的各种仓库和命令来理解。
 
-### 3.Git 常用查询命令和基本开发流程（补充）
+### 3.Git 常用查询命令和基本开发流程
 
 ----------
 
@@ -157,6 +157,16 @@ git show <tag-name> //显示该标签及其对应的commit信息
 **开发流程如下：**
 
 ![开发流程](http://photogz.photo.store.qq.com/psc?/V50nj7bY2Lzqzo3uZg6y2nU9kP1lmhTH/ruAMsa53pVQWN7FLK88i5pyzvHNV11T9uHnuLOvRCWKc1Sryj7R0ogUfaD5Q.6xmgRqUE06w6Wkc7a3mjQDZf2DHu6iUY1sW0lOGNee.pT0!/b&bo=sgMQAgAAAAADB4E!&rf=viewer_4)
+
+### 4.附录（关于本文，以及如何开始Git之旅）
+
+在开始我们的git工作之前，必须拥有一个本地仓库和本地仓库对应的远程仓库，为此，你可以`git init`创建新仓库然后用**git remote add** 关联远程仓库，或者直接`git clone`一个现成的仓库。具体过程可以参考[(65条消息) git 本地仓库关联到远程仓库_Mr.Hu.的博客-CSDN博客_已有本地与远程关联 git](https://blog.csdn.net/sinat_39049092/article/details/113417142)，网上这一类资料很多。
+
+**本课程中，我们所采用的是clone的方法，详见课件。**感兴趣的同学可以自己尝试一下`git init`。网上关于git的教程资源很丰富。
+
+**git工作环境的配置**会在课件中展示，包括ssh协议密钥和创建本地仓库的过程等，在此不再赘述。即便没有理解本文内容，做实验的时候照着课件上现成步骤一步步来也没有问题，遇到问题了上网搜一搜也能解决。但还是建议掌握Git这一工具，非常好用~
+
+**本文所提及“常用命令”仅仅是宽泛之言，并不代表本课程一定要用，用不用取决于你的需求。**
 
 ------------------
 
